@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Data Stuff Here |       </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!ReportTab.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>         |                       ....                |                           ....        |</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>.....                  |____________________ |________________________ |______________________|</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>.....                  |____________________ |________________________ |______________________|</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Left>0.15833in</Left>
+        <Height>1.78125in</Height>
+        <Width>6.53125in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>3.13542in</Height>
+    <Style />
+  </Body>
+  <Width>7.5in</Width>
+  <Page>
+    <PageHeader>
+      <Height>1.98833in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Tab1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tab1</Value>
+                  <Style>
+                    <FontWeight>=IIF(Parameters!ReportTab.Value = ReportItems!Tab1.Value,"Bold","Normal")</FontWeight>
+                    <Color>=IIF(Parameters!ReportTab.Value = ReportItems!Tab1.Value,"White","Black")</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <ActionInfo>
+            <Actions>
+              <Action>
+                <Drillthrough>
+                  <ReportName>TabExample</ReportName>
+                  <Parameters>
+                    <Parameter Name="ReportTab">
+                      <Value>=ReportItems!Tab1.Value</Value>
+                    </Parameter>
+                  </Parameters>
+                </Drillthrough>
+              </Action>
+            </Actions>
+          </ActionInfo>
+          <Top>1.62375in</Top>
+          <Left>0.15833in</Left>
+          <Height>0.25in</Height>
+          <Width>1in</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <TopBorder>
+              <Color>LightSteelBlue</Color>
+            </TopBorder>
+            <BottomBorder>
+              <Style>None</Style>
+            </BottomBorder>
+            <LeftBorder>
+              <Color>LightSteelBlue</Color>
+            </LeftBorder>
+            <RightBorder>
+              <Color>LightSteelBlue</Color>
+            </RightBorder>
+            <BackgroundColor>=IIF(Parameters!ReportTab.Value = ReportItems!Tab1.Value,"LightSteelBlue","Transparent")</BackgroundColor>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Tab2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tab2</Value>
+                  <Style>
+                    <FontWeight>=IIF(Parameters!ReportTab.Value = ReportItems!Tab2.Value,"Bold","Normal")</FontWeight>
+                    <Color>=IIF(Parameters!ReportTab.Value = ReportItems!Tab2.Value,"White","Black")</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <ActionInfo>
+            <Actions>
+              <Action>
+                <Drillthrough>
+                  <ReportName>TabExample</ReportName>
+                  <Parameters>
+                    <Parameter Name="ReportTab">
+                      <Value>=ReportItems!Tab2.Value</Value>
+                    </Parameter>
+                  </Parameters>
+                </Drillthrough>
+              </Action>
+            </Actions>
+          </ActionInfo>
+          <Top>1.62375in</Top>
+          <Left>1.18333in</Left>
+          <Height>0.25in</Height>
+          <Width>1in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <TopBorder>
+              <Color>LightSteelBlue</Color>
+            </TopBorder>
+            <BottomBorder>
+              <Style>None</Style>
+            </BottomBorder>
+            <LeftBorder>
+              <Color>LightSteelBlue</Color>
+            </LeftBorder>
+            <RightBorder>
+              <Color>LightSteelBlue</Color>
+            </RightBorder>
+            <BackgroundColor>=IIF(Parameters!ReportTab.Value = ReportItems!Tab2.Value,"LightSteelBlue","Transparent")</BackgroundColor>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Tab3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tab3</Value>
+                  <Style>
+                    <FontWeight>=IIF(Parameters!ReportTab.Value = ReportItems!Tab3.Value,"Bold","Normal")</FontWeight>
+                    <Color>=IIF(Parameters!ReportTab.Value = ReportItems!Tab3.Value,"White","Black")</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <ActionInfo>
+            <Actions>
+              <Action>
+                <Drillthrough>
+                  <ReportName>TabExample</ReportName>
+                  <Parameters>
+                    <Parameter Name="ReportTab">
+                      <Value>=ReportItems!Tab3.Value</Value>
+                    </Parameter>
+                  </Parameters>
+                </Drillthrough>
+              </Action>
+            </Actions>
+          </ActionInfo>
+          <Top>1.62375in</Top>
+          <Left>2.22083in</Left>
+          <Height>0.25in</Height>
+          <Width>1in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <TopBorder>
+              <Color>LightSteelBlue</Color>
+            </TopBorder>
+            <BottomBorder>
+              <Style>None</Style>
+            </BottomBorder>
+            <LeftBorder>
+              <Color>LightSteelBlue</Color>
+            </LeftBorder>
+            <RightBorder>
+              <Color>LightSteelBlue</Color>
+            </RightBorder>
+            <BackgroundColor>=IIF(Parameters!ReportTab.Value = ReportItems!Tab3.Value,"LightSteelBlue","Transparent")</BackgroundColor>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Tab4">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tab4</Value>
+                  <Style>
+                    <FontWeight>=IIF(Parameters!ReportTab.Value = ReportItems!Tab4.Value,"Bold","Normal")</FontWeight>
+                    <Color>=IIF(Parameters!ReportTab.Value = ReportItems!Tab4.Value,"White","Black")</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <ActionInfo>
+            <Actions>
+              <Action>
+                <Drillthrough>
+                  <ReportName>TabExample</ReportName>
+                  <Parameters>
+                    <Parameter Name="ReportTab">
+                      <Value>=ReportItems!Tab4.Value</Value>
+                    </Parameter>
+                  </Parameters>
+                </Drillthrough>
+              </Action>
+            </Actions>
+          </ActionInfo>
+          <Top>1.62375in</Top>
+          <Left>3.24583in</Left>
+          <Height>0.25in</Height>
+          <Width>1in</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <TopBorder>
+              <Color>LightSteelBlue</Color>
+            </TopBorder>
+            <BottomBorder>
+              <Style>None</Style>
+            </BottomBorder>
+            <LeftBorder>
+              <Color>LightSteelBlue</Color>
+            </LeftBorder>
+            <RightBorder>
+              <Color>LightSteelBlue</Color>
+            </RightBorder>
+            <BackgroundColor>=IIF(Parameters!ReportTab.Value = ReportItems!Tab4.Value,"LightSteelBlue","Transparent")</BackgroundColor>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Tab5">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tab5</Value>
+                  <Style>
+                    <FontWeight>=IIF(Parameters!ReportTab.Value = ReportItems!Tab5.Value,"Bold","Normal")</FontWeight>
+                    <Color>=IIF(Parameters!ReportTab.Value = ReportItems!Tab5.Value,"White","Black")</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <ActionInfo>
+            <Actions>
+              <Action>
+                <Drillthrough>
+                  <ReportName>TabExample</ReportName>
+                  <Parameters>
+                    <Parameter Name="ReportTab">
+                      <Value>=ReportItems!Tab5.Value</Value>
+                    </Parameter>
+                  </Parameters>
+                </Drillthrough>
+              </Action>
+            </Actions>
+          </ActionInfo>
+          <Top>1.62375in</Top>
+          <Left>4.28333in</Left>
+          <Height>0.25in</Height>
+          <Width>1in</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <TopBorder>
+              <Color>LightSteelBlue</Color>
+            </TopBorder>
+            <BottomBorder>
+              <Style>None</Style>
+            </BottomBorder>
+            <LeftBorder>
+              <Color>LightSteelBlue</Color>
+            </LeftBorder>
+            <RightBorder>
+              <Color>LightSteelBlue</Color>
+            </RightBorder>
+            <BackgroundColor>=IIF(Parameters!ReportTab.Value = ReportItems!Tab5.Value,"LightSteelBlue","Transparent")</BackgroundColor>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Tab6">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tab6</Value>
+                  <Style>
+                    <FontWeight>=IIF(Parameters!ReportTab.Value = ReportItems!Tab6.Value,"Bold","Normal")</FontWeight>
+                    <Color>=IIF(Parameters!ReportTab.Value = ReportItems!Tab6.Value,"White","Black")</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <ActionInfo>
+            <Actions>
+              <Action>
+                <Drillthrough>
+                  <ReportName>TabExample</ReportName>
+                  <Parameters>
+                    <Parameter Name="ReportTab">
+                      <Value>=ReportItems!Tab6.Value</Value>
+                    </Parameter>
+                  </Parameters>
+                </Drillthrough>
+              </Action>
+            </Actions>
+          </ActionInfo>
+          <Top>1.62375in</Top>
+          <Left>5.30833in</Left>
+          <Height>0.25in</Height>
+          <Width>1in</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <TopBorder>
+              <Color>LightSteelBlue</Color>
+            </TopBorder>
+            <BottomBorder>
+              <Style>None</Style>
+            </BottomBorder>
+            <LeftBorder>
+              <Color>LightSteelBlue</Color>
+            </LeftBorder>
+            <RightBorder>
+              <Color>LightSteelBlue</Color>
+            </RightBorder>
+            <BackgroundColor>=IIF(Parameters!ReportTab.Value = ReportItems!Tab6.Value,"LightSteelBlue","Transparent")</BackgroundColor>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Rectangle Name="Rectangle2">
+          <ReportItems>
+            <Textbox Name="FakeHeaderInfoTextBox">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>A Title for </Value>
+                      <Style>
+                        <FontSize>16pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Parameters!ReportTab.Value</Value>
+                      <Style>
+                        <FontSize>16pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>A whole bunch of other text and stuff......................................................................</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Height>1.17708in</Height>
+              <Width>7.08333in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <KeepTogether>true</KeepTogether>
+          <Height>1.17708in</Height>
+          <Width>7.5in</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Rectangle>
+        <Rectangle Name="Rectangle3">
+          <KeepTogether>true</KeepTogether>
+          <Top>1.87375in</Top>
+          <Height>0.03in</Height>
+          <Width>7.5in</Width>
+          <ZIndex>7</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BackgroundColor>LightSteelBlue</BackgroundColor>
+          </Style>
+        </Rectangle>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <ReportParameters>
+    <ReportParameter Name="ReportTab">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="Tab1"</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReportTab</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>aec2585c-1fe6-404d-a1e2-fdf30eb49389</rd:ReportID>
+</Report>
