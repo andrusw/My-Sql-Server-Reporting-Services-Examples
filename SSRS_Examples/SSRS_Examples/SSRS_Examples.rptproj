@@ -8,6 +8,10 @@
       <Name>TabExample.rdl</Name>
       <FullPath>TabExample.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>RadioButtonsExample.rdl</Name>
+      <FullPath>RadioButtonsExample.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>

@@ -1,0 +1,18 @@
+    
+<Invoices>
+  <Invoice>
+    <InvoiceDetail>
+      <InvoiceNo>12201</InvoiceNo>
+      <Name>Sarah Greenberg</Name>
+      <InvoiceDate>03/15/2010</InvoiceDate>
+      <InvoiceAmount>145</InvoiceAmount>
+    </InvoiceDetail>
+    <InvoiceDetail>
+      <InvoiceNo>12203</InvoiceNo>
+      <Name>Joe Gonzalez</Name>
+      <InvoiceDate>04/12/2010</InvoiceDate>
+      <InvoiceAmount>255</InvoiceAmount>
+    </InvoiceDetail>
+  </Invoice>
+</Invoices>
+ 
